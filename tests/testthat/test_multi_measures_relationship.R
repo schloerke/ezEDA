@@ -1,7 +1,7 @@
 p <- multi_measures_relationship(ggplot2::mpg, cty, hwy, displ)
 
 test_that("Plot returns gg object",{
-  expect_that(class(p)[[1]], equals("gg"))
+  expect_true(GGally::is.ggmatrix(p))
 })
 
 test_that("Plot uses correct data",{
